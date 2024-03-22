@@ -1,0 +1,39 @@
+---
+import { MantineProvider } from "@mantine/core";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { IconContext } from "phosphor-react";
+import AppLayout from "./AppLayout";
+import About from "./About";
+import Products from "./Products";
+import Home from "./Home";
+import Impressum from "./Impressum";
+import Error from "./Error";
+import NoProducts from "./NoProdukts";
+---
+
+<MantineProvider>
+  <IconContext.Provider
+    value={{
+      color: "grey",
+      size: 32,
+      weight: "bold",
+      mirrored: false,
+    }}
+  >
+    <BrowserRouter>
+      <Routes>
+        <Route element={<AppLayout />}>
+          <Route index element={<Home />} />
+          <Route index path="/JC-Website/" element={<Home />} />
+          <Route path="/JC-Website/products" element={<Products />} />
+          <Route path="/JC-Website/about-us" element={<About />} />
+          <Route path="/JC-Website/impressum" element={<Impressum />} />
+          <Route path="/JC-Website/not">
+            <NoProducts />
+          </Route>
+        </Route>
+        <Route path="*" element={<Error />} />
+      </Routes>
+    </BrowserRouter>
+  </IconContext.Provider>
+</MantineProvider>
