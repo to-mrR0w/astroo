@@ -5,8 +5,6 @@
 //   getCurrQuantityById,
 //   increaseItemQuantity,
 // } from "../features/cart/cartSlice";
-import { Link } from "react-router-dom";
-
 function Produkte(props) {
   const quantity = 0;
   const { data } = props;
@@ -60,8 +58,8 @@ function Produkte(props) {
           </button>
         ) : (
           <>
-            <Link
-              to={`${disabledd ? "#" : productPay}`}
+            <a
+              href={`${disabledd ? "#" : productPay}`}
               target="_blank"
               rel="noreferrer"
               // className={`addToCartBttn border w-[250px] ${
@@ -76,7 +74,7 @@ function Produkte(props) {
             >
               <span>Pay</span>
               {/* {cartItemsAmount > 0 && <>({cartItemsAmount})</>} */}
-            </Link>
+            </a>
           </>
         )}
       </div>
