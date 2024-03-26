@@ -1,4 +1,4 @@
-import ImageAboutUs from "../components/ImageAboutUs";
+import ImageAboutUs from "./ImageAboutUs";
 import { FOUNDERS } from "../products";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import { faArrowDown } from "@fortawesome/free-solid-svg-icons";

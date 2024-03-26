@@ -1,44 +1,42 @@
-import { Link } from "react-router-dom";
-
 function Navbar() {
   return (
     <>
       <nav className="flex flex-col md:flex-row items-center justify-between p-4 bg-gray-800 text-white">
         <div className="flex items-center">
-          <Link to="/JC-Website/" className="font-bold flex items-center">
+          <a href="/" className="font-bold flex items-center">
             <img
               src="/Logo.jpeg"
               alt="Logo"
               className="h-16 w-16 rounded-md object-cover mr-2"
             />
-          </Link>
+          </a>
         </div>
         <div className="mt-4 md:mt-0 md:flex-grow md:flex md:items-center md:justify-center">
           <div className="flex flex-col md:flex-row md:items-center md:ml-2 md:gap-16 text-2xl">
-            <Link
+            <a
               className="nav-link md:ml-4 mb-2 md:mb-0 hover:underline-offset-1 hover:underline"
-              to="/JC-Website/"
+              href="/"
             >
               Startseite
-            </Link>
-            <Link
+            </a>
+            <a
               className="nav-link md:ml-4 mb-2 md:mb-0 hover:underline-offset-1 hover:underline"
-              to="/JC-Website/products"
+              href="/produkt"
             >
               Produkt
-            </Link>
-            <Link
+            </a>
+            <a
               className="nav-link md:ml-4 mb-2 md:mb-0 hover:underline-offset-1 hover:underline"
-              to="/JC-Website/about-us"
+              href="/about-us"
             >
               Über uns
-            </Link>
-            <Link
+            </a>
+            <a
               className="nav-link md:ml-4 mb-2 md:mb-0 hover:underline-offset-8 hover:underline"
-              to="/JC-Website/impressum"
+              href="/impressum"
             >
               Impressum
-            </Link>
+            </a>
           </div>
           {/* Removed shopping cart section */}
         </div>

@@ -1,6 +1,6 @@
-import { useEffect } from "react";
+import { Fragment, useEffect } from "react";
 import { gsap } from "gsap";
-import Footer from "../components/Footer";
+import Footer from "./Footer";
 
 // Register ScrollTrigger plugin
 gsap.registerPlugin(gsap.ScrollTrigger);
@@ -40,7 +40,7 @@ function Home() {
   }, []);
 
   return (
-    <>
+    <Fragment>
       <div className="wrapText flex flex-col md:flex-row overflow-auto">
         {/*Section 1 ; Wer wir sind und wie wir dazu gekommen sind */}
         <section className="text md:w-1/2 md:pr-4 overflow-auto text-2xl">
@@ -84,7 +84,7 @@ function Home() {
       </div>
 
       <Footer className="mt-auto footer" />
-    </>
+    </Fragment>
   );
 }
 

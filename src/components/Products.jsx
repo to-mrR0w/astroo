@@ -1,4 +1,4 @@
-import Produkte from "../components/Produkte.jsx";
+import Produkte from "./Produkte.jsx";
 import { DATA } from "../products.js";
 //const desktopImage = "/_DSC3239.JPG";
 

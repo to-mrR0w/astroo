@@ -8,8 +8,8 @@ export default defineConfig({
   // ...
   integrations: [
     react({
-      experimentalReactChildren: true,
-    }),
+      include: ['**/react/*'],
+    }),,
     tailwind({
       nesting: true,
     }),
