@@ -1,8 +1,7 @@
 import { InstagramLogo } from "phosphor-react";
-import styled from "styled-components";
 import { FaFacebook, FaLinkedin, FaMailchimp, FaTiktok } from "react-icons/fa";
 
-const IconContainer = styled.div`
+const IconContainer = `
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -13,7 +12,7 @@ const IconContainer = styled.div`
   }
 `;
 
-const StyledLink = styled.a`
+const StyledLink = `
   font-weight: 600;
   color: #4a5568;
   transition: color 0.3s ease;
@@ -23,7 +22,7 @@ const StyledLink = styled.a`
   }
 `;
 
-const StyledFooter = styled.footer`
+const StyledFooter = `
   background-color: #f5f5f5;
   padding: 2rem;
   text-align: center;
@@ -38,61 +37,65 @@ const StyledFooter = styled.footer`
 
 function Footer() {
   return (
-    <StyledFooter>
-      <IconContainer>
+    <footer style={StyledFooter}>
+      <div style={IconContainer}>
         <InstagramLogo size={24} />
-        <StyledLink
+        <a
+          style={StyledLink}
           href="https://www.instagram.com/easycharge_jc/"
           target="_blank"
           rel="noreferrer"
         >
           Follow us on Instagram
-        </StyledLink>
-      </IconContainer>
-      <IconContainer>
+        </a>
+      </div>
+      <div style={IconContainer}>
         {/*LINKEDIN ICONCONTAINER*/}
         <FaLinkedin size={24} />
-        <StyledLink
+        <a
+          style={StyledLink}
           href="https://www.linkedin.com/in/easycharge-jc-3a27802a0?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app&original_referer=https%3A%2F%2Flinktr.ee%2F"
           target="_blank"
           rel="noreferrer"
         >
           Follow on LinkedIn
-        </StyledLink>
-      </IconContainer>
-      <IconContainer>
+        </a>
+      </div>
+      <div style={IconContainer}>
         {/*TIKTOK ICONCONTAINER*/}
         <FaTiktok size={24} />
-        <StyledLink
+        <a
+          style={StyledLink}
           href="https://www.tiktok.com/@easycharge_jc?_t=8hwana6xjfo&_r=1"
           target="_blank"
           rel="noreferrer"
         >
           Follow on TikTok
-        </StyledLink>
-      </IconContainer>
+        </a>
+      </div>
 
       {/*Facebook ICONCONTAINER*/}
-      <IconContainer>
+      <div style={IconContainer}>
         <FaFacebook size={24} />
-        <StyledLink
+        <a
+          styled={StyledLink}
           href="https://www.facebook.com/people/EasyCharge-Jc/pfbid036zyuhy1GQvVZTZQdqoiP45cMowoVPcNpNdS92MGMoXM69agb8WnuvcXk9699W5oGl/"
           target="_blank"
           rel="noreferrer"
         >
           Follow on Facebook
-        </StyledLink>
-      </IconContainer>
-      <IconContainer>
+        </a>
+      </div>
+      <div style={IconContainer}>
         <FaMailchimp size={24} />
         <p className="font-semibold text-stone-600">
           Contact:{" "}
-          <StyledLink href="mailto:office@easycharge-jc.com">
+          <a style={StyledLink} href="mailto:office@easycharge-jc.com">
             office@easycharge-jc.com
-          </StyledLink>
+          </a>
         </p>
-      </IconContainer>
-    </StyledFooter>
+      </div>
+    </footer>
   );
 }
 

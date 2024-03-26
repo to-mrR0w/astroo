@@ -1,10 +1,9 @@
 import { useEffect } from "react";
 import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger"; // Import ScrollTrigger separately
 import Footer from "../components/Footer";
 
 // Register ScrollTrigger plugin
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(gsap.ScrollTrigger);
 
 function Home() {
   useEffect(() => {

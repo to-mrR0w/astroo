@@ -1,9 +1,9 @@
 ---
-import { Fragment } from 'react';
-import App from './App.astro';
+import App from './App.jsx';
 import './App.css';
+import AppLayout from './AppLayout.jsx';
 ---
 
-<Fragment astro>
-  <App />
-</Fragment>
+<AppLayout >
+  <App client:only/>
+</AppLayout/>
